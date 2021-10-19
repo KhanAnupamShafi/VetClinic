@@ -1,0 +1,9 @@
+.floatingNav {
+  z-index: 20;
+  background: #e2e8ff;
+  width: 100%;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #44b2cd 0%, #008fbe 100%);
+}
