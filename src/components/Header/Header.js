@@ -125,7 +125,7 @@ const Header = () => {
 
                         <button
                           id="navAction"
-                          className="bg-btn uppercase tracking-wider font-medium rounded-sm shadow-2xl lg:py-2 px-6  focus:outline-none focus:shadow-outline transform-gpu transition hover:bg-white hover:delay-150 hover:scale-105 duration-300 ease-in-out"
+                          className="bg-transparent uppercase tracking-wider font-medium rounded-sm shadow-2xl lg:py-2 px-6  focus:outline-none focus:shadow-outline transform-gpu transition  hover:delay-150 hover:scale-105 duration-300 ease-in-out"
                           onClick={logOut}
                         >
                           Log Out
