@@ -3,6 +3,8 @@ import { Transition } from "@headlessui/react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import { HashLink } from "react-router-hash-link";
+import logo from "../../images/logo/logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,8 +28,8 @@ const Header = () => {
           id="header"
           className={
             scrolled
-              ? "fixed w-full z-30 top-0 text-blue-500 navbar-container floatingNav"
-              : "relative w-full z-30 top-0 text-white navbar-container gradient"
+              ? "fixed w-full z-50 top-0 text-blue-500 navbar-container floatingNav"
+              : "fixed w-full z-50 top-0 text-white navbar-container gradient"
           }
         >
           <div className="w-full relative container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -36,25 +38,7 @@ const Header = () => {
                 className="px-3 py-2 flex items-center uppercase leading-snug hover:opacity-75 text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                 href="/"
               >
-                <svg
-                  className="h-8 fill-current inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512.005 512.005"
-                >
-                  <rect
-                    fill="#2a2a31"
-                    x="16.539"
-                    y="425.626"
-                    width="479.767"
-                    height="50.502"
-                    transform="matrix(1,0,0,1,0,0)"
-                  />
-                  <path
-                    className="plane-take-off"
-                    d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                  />
-                </svg>
-                LANDING
+                <img src={logo} alt="" />
               </a>
             </div>
             <div className="block md:hidden pr-4">
@@ -84,19 +68,19 @@ const Header = () => {
                   Home
                 </NavLink>
 
-                <a
-                  href="/"
+                <HashLink
+                  to="/home#services"
                   className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
-                  Team
-                </a>
+                  Services
+                </HashLink>
 
-                <a
-                  href="/"
+                <NavLink
+                  to="/shop"
                   className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
-                  Projects
-                </a>
+                  Food&Medicine
+                </NavLink>
 
                 <NavLink
                   to="/appointment"
@@ -106,7 +90,7 @@ const Header = () => {
                 </NavLink>
 
                 <div className="py-1">
-                  {!user.email ? (
+                  {!user.displayName ? (
                     <Link to="/login">
                       <button
                         id="navAction"
@@ -179,40 +163,95 @@ const Header = () => {
             {() => (
               <div className="md:hidden" id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  <a
-                    href="/"
+                  <NavLink
+                    to="/home"
                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Dashboard
-                  </a>
+                    Home
+                  </NavLink>
 
-                  <a
-                    href="/"
+                  <HashLink
+                    to="/services#home"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Team
-                  </a>
+                    Services
+                  </HashLink>
 
-                  <a
-                    href="/"
+                  <NavLink
+                    to="/shop"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Projects
-                  </a>
+                    Food & Medicine
+                  </NavLink>
 
-                  <a
-                    href="/"
+                  <NavLink
+                    to="/appointment"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Calendar
-                  </a>
+                    Book Appointment
+                  </NavLink>
 
-                  <a
-                    href="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Reports
-                  </a>
+                  <div className="py-1 flex flex-row">
+                    {!user.email ? (
+                      <Link to="/login">
+                        <button
+                          id="navAction"
+                          className="bg-transparent border uppercase  tracking-widest font-bold rounded-sm lg:my-2 px-6 shadow-2xl  focus:outline-none focus:shadow-outline transform-gpu transition hover:bg-btnHover hover:delay-150 hover:scale-105 duration-300 ease-in-out"
+                        >
+                          Sign In
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6 ml-2 mb-1 inline"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                            />
+                          </svg>
+                        </button>
+                      </Link>
+                    ) : (
+                      <>
+                        <div className="w-full flex flex-col mx-auto justify-center gap-4 items-center">
+                          <div className="flex flex-col justify-center items-center">
+                            {" "}
+                            <h1>Welcome, {user?.displayName}</h1>
+                            <img
+                              className="h-12 w-12 ml-0 rounded-full"
+                              src={user?.photoURL}
+                              alt=""
+                            />
+                          </div>
+                          <button
+                            id="navAction"
+                            className="bg-btn uppercase tracking-wider font-medium rounded-sm shadow-2xl lg:py-2 px-6  focus:outline-none focus:shadow-outline transform-gpu transition hover:bg-white hover:delay-150 hover:scale-105 duration-300 ease-in-out"
+                            onClick={logOut}
+                          >
+                            Log Out
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 ml-2 mb-1 inline"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             )}

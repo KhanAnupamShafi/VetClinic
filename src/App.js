@@ -8,6 +8,9 @@ import Login from "./pages/Login/Login";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Register from "./pages/Register/Register";
+import Footer from "./components/Footer/Footer";
+import Shop from "./pages/Shop/Shop";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -29,14 +32,22 @@ function App() {
             <PrivateRoute exact path="/appointment">
               <Appointment />
             </PrivateRoute>
+            <PrivateRoute exact path="/shop">
+              <Shop />
+            </PrivateRoute>
+
             <Route exact path="/login">
               <Login />
             </Route>
             <Route exact path="/register">
               <Register />
             </Route>
-            <Route path="*"></Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
+
+          <Footer />
         </Router>
       </AuthProvider>
     </div>

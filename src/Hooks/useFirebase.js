@@ -29,9 +29,7 @@ const useFirebase = () => {
   const handleGoogleSignIn = () => {
     setIsLoading(true);
     //Force pop up when signed in previously with a single google account
-    googleProvider.setCustomParameters({
-      prompt: "select_account",
-    });
+    console.log(user);
     return signInWithPopup(auth, googleProvider);
 
     // console.log(user);
@@ -109,13 +107,14 @@ const useFirebase = () => {
       .catch((error) => {
         // An error occurred
         // ...
-      });
+      })
+      .finally(setIsLoading(false));
   };
 
   //verify
   const verifyEmail = () => {
     sendEmailVerification(auth.currentUser).then((result) => {
-      setError("Email Sent! Pls Check");
+      setError("Email Sent! Please verify ");
       //   gotoLogin();
     });
   };

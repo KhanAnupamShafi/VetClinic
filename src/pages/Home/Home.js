@@ -49,7 +49,7 @@ const home = () => {
 
         {/* /* ---------------------------- Services Section ---------------------------- */}
 
-        <section className="bg-white border-b py-8">
+        <section id="services" className="bg-white border-b py-8">
           <div className="container mx-auto py-24 px-5 pt-4 pb-12 ">
             <div className="lg:w-full mx-auto">
               <div className="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
