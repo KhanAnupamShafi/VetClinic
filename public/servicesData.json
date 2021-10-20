@@ -9,7 +9,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 170,
-    "bdt": 120551,
+    "bdt": 205,
     "info": "At Hillside Pet Clinic we understand the important role that healthy teeth play in the overall health of any pet; therefore, much of our professional time is spent in this area. Basic care includes routine cleaning (prophylaxis) for dogs and cats.",
     "completed": false
   },
@@ -23,7 +23,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 170,
-    "bdt": 126144,
+    "bdt": 161,
     "info": "we uses the most modern medical protocols and equipment to compassionately diagnose and treat your dog or cat's dermatological by providing expert skin, ear, and allergy care for animals.",
     "completed": false
   },
@@ -37,7 +37,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 330,
-    "bdt": 316914,
+    "bdt": 169,
     "info": "Preventative care is an important aspect in maintaining your pet’s health. Proper vaccination is vital in protecting them against harmful diseases.",
     "completed": false
   },
@@ -51,7 +51,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 170,
-    "bdt": 128164,
+    "bdt": 124,
     "info": "Annual wellness exams evaluate your pets overall health, detect problems before they become serious, and keep them on track to live a long, healthy life.",
     "completed": false
   },
@@ -65,7 +65,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 170,
-    "bdt": 133756,
+    "bdt": 107,
     "info": "Acupuncture therapy for your pet is a pain-free way to treat a variety of conditions, primarily those dealing with inflammation and pain.",
     "completed": false
   },
@@ -80,7 +80,7 @@
     "bed": "One",
     "occupency": 4,
     "clients": 315,
-    "bdt": 146806,
+    "bdt": 168,
     "info": "Proper diet and nutrition can help your pet fight against disease, maintain a proper weight, and promote the overall well-being of your pet.",
     "completed": false
   },
@@ -94,7 +94,7 @@
     "bed": "2 King-clients",
     "occupency": 6,
     "clients": 335,
-    "bdt": 354198,
+    "bdt": 91,
     "info": "From routine surgical procedures, to more complex surgeries, we look forward to taking care of your pet! t is our goal at Vethouse Animal Hospital to ensure your pets have healthy lives.",
     "completed": false
   },
@@ -108,7 +108,7 @@
     "bed": "2 King-clients",
     "occupency": 6,
     "clients": 335,
-    "bdt": 372840,
+    "bdt": 137,
     "info": "Whether your pet is a youngster, a “senior citizen,” or any age in between, we are also here whenever they are not feeling well. We will work hard to make sure your pets return to good health quickly.",
     "completed": false
   }

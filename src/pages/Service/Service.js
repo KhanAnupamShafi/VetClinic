@@ -17,7 +17,7 @@ const Service = () => {
   //side-effect
 
   useEffect(() => {
-    const serviceFound = services.find((service) => service.id === id); //suiteID is string url
+    const serviceFound = services.find((service) => service.id === id);
 
     setService(serviceFound);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -77,7 +77,7 @@ const Service = () => {
                   <div className="relative z-10 bg-white rounded shadow p-6 w-10/12 -mb-20">
                     <div className="flex items-center justify-between w-full sm:w-full mb-8">
                       <div className="flex items-center">
-                        <div className="p-4 bg-yellow-200 rounded-md">
+                        <div className="p-4 bg-pink-200 rounded-md">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="icon icon-tabler icon-tabler-discount"
@@ -147,6 +147,125 @@ const Service = () => {
           </div>
         </div>
       </div>
+
+      <section class="max-w-3xl mx-auto bg-gray-100 my-5 py-16">
+        <div class="text-center my-10">
+          <h1 class="font-bold text-3xl mb-2">
+            PET COMBO PACKS – UP TO 25% SAVINGS
+          </h1>
+          <h4 class="text-gray-600">
+            Prices shown below are for community clinics.
+          </h4>
+        </div>
+
+        <div class="flex flex-col md:flex-row px-2 md:px-0">
+          <div class="w-full md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0">
+            <h3 class="text-gray-600 text-lg">Base</h3>
+            <p class="text-gray-600 mt-1">
+              <span class="font-bold text-black text-4xl">$69</span> /Pet
+            </p>
+            <p class="text-sm text-gray-600 mt-2">
+              Replace Nasal Bordetella with Oral Bordetella for an additional
+              $8.00
+            </p>
+            <div class="text-sm text-gray-600 mt-4">
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> 3-in-1
+                Vaccine (FVRCP)
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Rabies
+                Vaccine (adjuvanted)
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> PureVax®
+                Rabies Vaccine
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Feline
+                Leukemia Vaccine
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Intestinal
+                Parasite Screening
+              </p>
+            </div>
+            <button class="w-full text-purple-700 border border-purple-700 rounded hover:bg-purple-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">
+              Choose Package
+            </button>
+          </div>
+          <div class="w-full md:w-1/3 text-white bg-pink-700 rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0">
+            <h3 class="text-lg">Popular</h3>
+            <p class="mt-1">
+              <span class="font-bold text-4xl">${service?.bdt}</span> /Pet
+            </p>
+            <p class="text-sm opacity-75 mt-2">
+              Replace Nasal Bordetella with Oral Bordetella for an additional
+              $8.00
+            </p>
+            <div class="text-sm mt-4">
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Feline
+                Retroviral Test Discount
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Own analytics
+                platform
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Adult
+                Wellness Bloodwork
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Senior Full
+                Wellness Package
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Free Physical
+                exam
+              </p>
+            </div>
+            <button class="w-full text-purple-700 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">
+              Choose Package
+            </button>
+          </div>
+          <div class="w-full md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 mb-10 md:mb-0">
+            <h3 class="text-gray-600 text-lg">Enterprise</h3>
+            <p class="text-gray-600 mt-1">
+              <span class="font-bold text-black text-4xl">$299</span> /Pet
+            </p>
+            <p class="text-sm text-gray-600 mt-2">
+              Replace Nasal Bordetella with Oral Bordetella for an additional
+              $8.00
+            </p>
+            <div class="text-sm text-gray-600 mt-4">
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Lifetime
+                Microchip Pet ID
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Own analytics
+                platform
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Free Nail
+                Trim
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Free
+                Deworming
+              </p>
+              <p class="my-2">
+                <span class="fa fa-check-circle mr-2 ml-1"></span> Tapeworm
+                Treatment
+              </p>
+            </div>
+            <button class="w-full text-purple-700 border border-purple-700 rounded hover:bg-purple-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">
+              Choose Package
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

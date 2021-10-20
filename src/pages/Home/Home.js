@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import TextLoop from "react-text-loop";
 import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
@@ -30,9 +31,11 @@ const home = () => {
                 We strive to practice the highest quality of veterinary services
                 using state of the art technology and techniques.
               </p>
-              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded w-60 m-auto">
-                Let's go!
-              </button>
+              <HashLink to="/home#services">
+                <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded w-60 m-auto">
+                  Let's go!
+                </button>
+              </HashLink>
             </div>
           </div>
         </div>

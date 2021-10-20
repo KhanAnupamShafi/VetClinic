@@ -45,7 +45,7 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const ImageSlider = ({ foods, images, slidesToShow = 3 }) => {
+const ImageSlider = ({ foods, slidesToShow = 3 }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const settings = {
@@ -110,7 +110,7 @@ const ImageSlider = ({ foods, images, slidesToShow = 3 }) => {
                 </div>
 
                 <div className="relative px-4 -mt-16  ">
-                  <div className="bg-white p-6 rounded-lg shadow-lg">
+                  <div className="bg-pink-300 p-6 rounded-lg shadow-lg">
                     <div className="flex flex-col lg:flex-row py-2 items-baseline">
                       <span className="bg-purple-200 text-purple-800 lg:text-sm px-2 lg:px-4 inline-block rounded-full  uppercase font-semibold tracking-wide">
                         New

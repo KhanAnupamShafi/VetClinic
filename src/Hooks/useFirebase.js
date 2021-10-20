@@ -11,6 +11,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+
 import initializeFirebase from "../firebase/firebase.init";
 
 initializeFirebase(); //initiate required before using firebase
@@ -43,6 +44,8 @@ const useFirebase = () => {
   };
 
   //email-password sign-in
+
+  //Verification after register successfull
 
   const handleUserRegister = (userData) => {
     setIsLoading(true);
@@ -77,7 +80,6 @@ const useFirebase = () => {
   };
 
   //update info
-
   const updateInfo = (data) => {
     console.log("in update", data);
 
@@ -89,6 +91,7 @@ const useFirebase = () => {
       .then((r) => {
         // Profile updated!
         setUser(r.user);
+
         // ...
       })
       .catch((error) => {
@@ -99,12 +102,10 @@ const useFirebase = () => {
 
   //verify
   const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser)
-      .then((result) => {
-        setError("Email Sent! Please verify ");
-        //   gotoLogin();
-      })
-      .finally(setIsLoading(false));
+    sendEmailVerification(auth.currentUser).then((result) => {
+      setError("Email Sent! Please verify ");
+    });
+    // .finally(setIsLoading(false));
   };
 
   //sign-Out

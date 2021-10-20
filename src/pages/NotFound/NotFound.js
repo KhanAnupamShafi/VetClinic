@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-24 py-24 lg:py-12 md:px-16 px-4">
-      <h1 className="text-7xl font-bold text-indigo-700 pb-2">404</h1>
+      <h1 className="text-7xl font-bold text-secondary pb-2">404</h1>
       <h2 className="lg:text-5xl md:text-4xl text-2xl font-bold text-gray-800 py-2">
         This Page Does Not Exist
       </h2>
@@ -14,7 +14,7 @@ const NotFound = () => {
       </p>
       <div className="flex md:flex-row flex-col items-center justify-center md:gap-8 mt-4 mb-12 w-full">
         <Link to="/home">
-          <button className="p-4 text-base text-center text-white md:w-auto md:mb-0 mb-4 w-full bg-indigo-700 border rounded-md hover:bg-indigo-800">
+          <button className="p-4 text-base text-center text-white md:w-auto md:mb-0 mb-4 w-full bg-secondary border rounded-md hover:bg-indigo-800">
             Get back to Homepage
           </button>
         </Link>
@@ -23,10 +23,7 @@ const NotFound = () => {
         </button>
       </div>
       <div className="hidden md:grid place-content-center lg:w-1/3 w-1/2">
-        <img
-          src="https://i.ibb.co/JjmY1tm/tuk-component.png"
-          alt="girl in an underconstruction site"
-        />
+        <img src="https://i.ibb.co/gFZQQRB/404-medical.jpg" alt="a doctor" />
       </div>
       <div className="md:hidden grid place-content-center">
         <img

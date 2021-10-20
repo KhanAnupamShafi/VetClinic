@@ -3,11 +3,17 @@ import { HashLink } from "react-router-hash-link";
 import { ErrorMessage } from "@hookform/error-message";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import { useHistory } from "react-router";
 
 const Register = () => {
   const { handleUserRegister, setIsLoading, error } = useAuth();
 
   // redirecting user to initial route
+  let history = useHistory();
+
+  const gotoLogin = () => {
+    history.push("/login");
+  };
 
   const {
     register,
@@ -22,6 +28,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       await handleUserRegister(data);
+      gotoLogin();
     } catch (error) {
       setError(error.message);
     } finally {
@@ -61,8 +68,8 @@ const Register = () => {
                 {...register("Name", {
                   required: "This input is required.",
                   minLength: {
-                    value: 8,
-                    message: "User name should at least be 8 character",
+                    value: 4,
+                    message: "User name should at least be 4 characters",
                   },
                 })}
               />

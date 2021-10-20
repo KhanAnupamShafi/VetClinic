@@ -32,7 +32,7 @@ const Services = () => {
               srcSet=""
             />
           </div>
-          <div className="lg:w-3/5 w-full lg:pl-0 py-2 rounded-xl rounded-b-none overflow-hidden bg-textWhite shadow">
+          <div className="lg:w-3/5 w-full lg:pl-0 py-2 rounded-xl rounded-b-none overflow-hidden bg-textWhite shadow hover:shadow-xl transition duration-100 ease-in-out">
             <div className="lg:px-4 py-2 text-color">
               <h1
                 tabIndex="0"
