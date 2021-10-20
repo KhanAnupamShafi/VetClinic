@@ -8,7 +8,7 @@ const NextArrow = ({ onClick }) => {
     <div className="nextArrow" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 far"
+        className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -17,7 +17,7 @@ const NextArrow = ({ onClick }) => {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
         />
       </svg>
     </div>
@@ -29,7 +29,7 @@ const PrevArrow = ({ onClick }) => {
     <div className="prevArrow" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 z-0"
+        className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -38,7 +38,7 @@ const PrevArrow = ({ onClick }) => {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+          d="M10 19l-7-7m0 0l7-7m-7 7h18"
         />
       </svg>
     </div>
@@ -70,7 +70,7 @@ const ImageSlider = ({ foods, images, slidesToShow = 3 }) => {
         },
       },
       {
-        breakpoint: 820,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -101,39 +101,47 @@ const ImageSlider = ({ foods, images, slidesToShow = 3 }) => {
                 aria-label="card 1"
                 className="focus:outline-none  sm:w-5/12 sm:max-w-xs relative pb-16 lg:pb-10 xl:max-w-sm lg:w-full w-11/12 mx-auto sm:mx-0"
               >
-                <div className="shadow h-64 rounded">
+                <div className="shadow h-64 rounded ">
                   <img
-                    className="focus:outline-none h-full w-full object-contain overflow-hidden rounded-full "
+                    className="focus:outline-none h-full w-full object-contain overflow-hidden rounded "
                     src={require(`../../images${image?.photo}`).default}
                     alt={image.alt}
                   />
                 </div>
-                <div className="p-6 shadow-lg w-11/12 mx-auto -mt-10 bg-primary rounded relative">
-                  <h1
-                    tabIndex="0"
-                    className="focus:outline-none uppercase text-white text-center text-3xl pb-3"
-                  >
-                    {image.title}
-                  </h1>
-                  <p
-                    tabIndex="0"
-                    className="focus:outline-none text-lg text-white text-center pb-3"
-                  >
-                    {image.subtitle}
-                  </p>
-                  <p
-                    tabIndex="0"
-                    className="focus:outline-none text-sm text-white text-center"
-                  >
-                    Rating: {image.rating}
-                  </p>
-                  <a
-                    className="focus:text-indigo-400 hover:text-indigo-400 text-indigo-300 cursor-pointer"
-                    href="/"
-                  >
-                    <span className=""> {image.reviews} reviews</span>
-                  </a>
+
+                <div className="relative px-4 -mt-16  ">
+                  <div className="bg-white p-6 rounded-lg shadow-lg">
+                    <div className="flex flex-col lg:flex-row py-2 items-baseline">
+                      <span className="bg-purple-200 text-purple-800 lg:text-sm px-2 lg:px-4 inline-block rounded-full  uppercase font-semibold tracking-wide">
+                        New
+                      </span>
+                      <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+                        &bull; {image?.stock}{" "}
+                        <span className="italic lowercase">
+                          remaining stocks
+                        </span>
+                      </div>
+                    </div>
+
+                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+                      {image?.title}
+                    </h4>
+
+                    <div className="mt-1">
+                      ${image?.price}.00
+                      <span className="text-gray-600 text-sm"> /per</span>
+                    </div>
+                    <div className="mt-4">
+                      <span className="text-blue-600 text-md font-semibold">
+                        {image?.rating}/5 ratings{" "}
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        (based on {image?.reviews} ratings)
+                      </span>
+                    </div>
+                  </div>
                 </div>
+
                 <button
                   className="mt-5 bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="button"

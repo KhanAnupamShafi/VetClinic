@@ -16,12 +16,15 @@ const Intro = () => {
   return (
     <div className="mx-auto px-6 py-12">
       <div className="flex flex-col justify-center items-center w-full">
-        <h1 className="f-f-d-s text-2xl lg:text-6xl leading-normal tracking-wide text-gray-800 text-center ">
+        <h1
+          className="f-f-d-s text-2xl lg:text-6xl leading-normal tracking-wide text-gray-800 text-center "
+          style={{ color: "#224e8d" }}
+        >
           Welcome to <span className="text-textRed">Vethouse</span> Animal
           Hospital
         </h1>
       </div>
-      <div className="lg:flex items-center justify-center mt-4 lg:mt-32">
+      <div className="container m-auto lg:flex items-center justify-center mt-4 lg:mt-32">
         <div className="lg:w-2/3 h-1/3 px-5">
           <Slider {...settings}>
             <div className="pl-5">

@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     window.onscroll = function () {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -29,7 +29,7 @@ const Header = () => {
           className={
             scrolled
               ? "fixed w-full z-50 top-0 text-blue-500 navbar-container floatingNav"
-              : "fixed w-full z-50 top-0 text-white navbar-container gradient"
+              : "relative w-full z-50 top-0 text-white navbar-container gradient"
           }
         >
           <div className="w-full relative container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -41,7 +41,7 @@ const Header = () => {
                 <img src={logo} alt="" />
               </a>
             </div>
-            <div className="block md:hidden pr-4">
+            <div className="block lg:hidden pr-4">
               <button
                 id="nav-toggle"
                 className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
@@ -59,39 +59,39 @@ const Header = () => {
               </button>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <NavLink
                   to="/home"
-                  className=" hover:bg-gray-700  px-3 py-2 rounded-md text-xl font-medium"
+                  className=" hover:bg-gray-700 hover:text-red-500  px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Home
                 </NavLink>
 
                 <HashLink
                   to="/home#services"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                  className=" hover:bg-gray-700 hover:text-red-500 px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Services
                 </HashLink>
 
                 <NavLink
                   to="/shop"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                  className=" hover:bg-gray-700 hover:text-red-500 px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Food&Medicine
                 </NavLink>
 
                 <NavLink
                   to="/appointment"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                  className=" hover:bg-gray-700 hover:text-red-500 px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Book Appointment
                 </NavLink>
 
                 <div className="py-1">
                   {!user.displayName ? (
-                    <Link to="/login">
+                    <HashLink to="/login#start">
                       <button
                         id="navAction"
                         className="bg-transparent border uppercase  tracking-widest font-bold rounded-sm lg:my-2 px-6 shadow-2xl  focus:outline-none focus:shadow-outline transform-gpu transition hover:bg-btnHover hover:delay-150 hover:scale-105 duration-300 ease-in-out"
@@ -112,7 +112,7 @@ const Header = () => {
                           />
                         </svg>
                       </button>
-                    </Link>
+                    </HashLink>
                   ) : (
                     <>
                       <div className="w-full flex mx-auto justify-center gap-4 items-center">
@@ -161,7 +161,7 @@ const Header = () => {
             leaveTo="opacity-0 scale-50"
           >
             {() => (
-              <div className="md:hidden" id="mobile-menu">
+              <div className="lg:hidden" id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <NavLink
                     to="/home"
@@ -172,21 +172,21 @@ const Header = () => {
 
                   <HashLink
                     to="/services#home"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium"
                   >
                     Services
                   </HashLink>
 
                   <NavLink
                     to="/shop"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium"
                   >
                     Food & Medicine
                   </NavLink>
 
                   <NavLink
                     to="/appointment"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium"
                   >
                     Book Appointment
                   </NavLink>

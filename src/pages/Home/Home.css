@@ -94,10 +94,9 @@
 }
 
 .services-bg {
-  height: 500px;
-  background-image: url(https://vethouse.freevision.me/wp-content/uploads/2019/04/448963-PEVZL1-726-min.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-position: center center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI1dnciIHZpZXdCb3g9IjAgMCAxMjgwIDE0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIj48cGF0aCBkPSJNMTI4MCAxNDBWMFM5OTMuNDYgMTQwIDY0MCAxMzkgMCAwIDAgMHYxNDB6Ii8+PC9nPjwvc3ZnPg==);
+  background-size: 100% 5vw;
+  bottom: 0;
+  height: 5vw;
+  z-index: 30;
 }

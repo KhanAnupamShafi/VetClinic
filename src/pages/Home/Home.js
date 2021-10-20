@@ -2,6 +2,7 @@ import React from "react";
 import TextLoop from "react-text-loop";
 import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
+import vid from "../../images/video/pet.mp4";
 import "./Home.css";
 
 const home = () => {
@@ -17,10 +18,7 @@ const home = () => {
             className="hero-video hidden lg:block"
             poster="https://www.olathehealth.org/wp-content/themes/olathe/assets/images/Dr.jpg"
           >
-            <source
-              src="https://www.olathehealth.org/wp-content/themes/olathe/assets/images/Wings-Jan-2018.mp4"
-              type="video/mp4"
-            />
+            <source src={vid} type="video/mp4" />
           </video>
 
           <div className="content">
@@ -28,14 +26,17 @@ const home = () => {
               <h1 className="leading-9 lg:leading-1">
                 A higher standard of care for your pets.
               </h1>
-              <p className="leading-5 py-3 lg:leading-9">
+              <p className="leading-5 py-8 lg:leading-9">
                 We strive to practice the highest quality of veterinary services
                 using state of the art technology and techniques.
               </p>
-              <button className="btn btn-outline-dark">Let's go!</button>
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded w-60 m-auto">
+                Let's go!
+              </button>
             </div>
           </div>
         </div>
+
         <div
           className="hero-container flex lg:hidden px-3 mx-auto  flex-wrap flex-col md:flex-row items-center"
           style={{
@@ -49,22 +50,22 @@ const home = () => {
 
         {/* /* ---------------------------- Services Section ---------------------------- */}
 
-        <section id="services" className="bg-white border-b py-8">
-          <div className="container mx-auto py-24 px-5 pt-4 pb-12 ">
+        <section id="services" className="bg-white border-b pt-8">
+          <div
+            className="mx-auto py-24 px-5 pt-4 pb-12 bg-fixed	bg-cover bg-center"
+            style={{
+              backgroundImage: `url("https://i.ibb.co/BCDSrNv/bg2-2.jpg")`,
+            }}
+          >
             <div className="lg:w-full mx-auto">
               <div className="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
-                <img
-                  alt="gallery"
-                  className="w-full object-cover h-full object-center block filter brightness-50 absolute inset-0"
-                  src="https://i.ibb.co/BCDSrNv/bg2-2.jpg"
-                />
-                <div className="text-center relative z-10 w-full">
-                  <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-textWhite">
+                <div className="text-center m-auto text-textWhite w-50">
+                  <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center">
                     Services
                   </h1>
                 </div>
                 <div className="w-full mb-5">
-                  <div className="h-2 bg-black mx-auto gradient w-25 opacity-50 my-0 py-0 rounded-t"></div>
+                  <div className="h-2 bg-black mx-auto gradient w-60 opacity-80 my-0 py-0 rounded-t"></div>
                 </div>
               </div>
             </div>
@@ -74,9 +75,9 @@ const home = () => {
             <Services />
           </div>
 
-          <div className="container mx-auto flex flex-wrap  px-5 pt-4 pb-12 bg-gray text-textWhite">
+          <div className="container mx-auto flex flex-wrap  px-5 pt-4 pb-12 bg-textWhite text-textWhite">
             <p className=""> </p>
-            <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-100">
+            <h1 className="w-full my-2 text-5xl text-primary font-bold leading-tight text-center text-gray-100">
               A Few Kind Words{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +99,13 @@ const home = () => {
             {/* testimonial */}
 
             <div className="mx-auto p-6 flex flex-col overflow-hidden">
-              <div className="lg:h-auto bg-gray  rounded-t rounded-b-none  shadow">
+              <div
+                className="lg:h-auto bg-gray  rounded-t rounded-b-none py-3 shadow"
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  color: "#224e8d",
+                }}
+              >
                 <TextLoop noWrap={false}>
                   <span className="">
                     <a href="/" className="">
@@ -146,6 +153,13 @@ const home = () => {
               </div>
             </div>
             {/* /* ---- end ----- */}
+          </div>
+          <div className="pt-12 mt-12 text-textWhite" style={{}}>
+            <img
+              className="mx-auto object-fill"
+              src="https://i.ibb.co/f97BdBV/shutterstock-1042071foot-min.jpg"
+              alt=""
+            />
           </div>
         </section>
       </div>

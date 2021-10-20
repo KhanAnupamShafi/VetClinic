@@ -46,21 +46,15 @@ const useFirebase = () => {
 
   const handleUserRegister = (userData) => {
     setIsLoading(true);
-    const { multipleErrorInput: email, ErrorInput: password } = userData;
+    const { Email: email, Password: password, Name: displayName } = userData;
     console.log(email, password);
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password, displayName)
       .then((result) => {
-        // Signed in
-        // const { email, photoURL, displayName } = result.user;
+        console.log(result.user);
 
-        // const userInfo = {
-        //   email: email,
-        //   photoURL,
-        //   name: displayName,
-        // };
-        updateInfo(result.user?.email);
         setUser(result.user);
+
         verifyEmail();
 
         // ...
@@ -75,28 +69,21 @@ const useFirebase = () => {
       .finally(setIsLoading(false));
   };
 
-  //sign in
+  //sign in user
+
   const signInUser = (email, password) => {
     setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
-    //   .then((result) => {
-    //     // Signed in
-    //     setUser(result.user);
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     const errorMessage = error.message;
-    //     setError(errorMessage);
-    //   })
-    //   .finally(setIsLoading(true));
   };
 
   //update info
 
-  const updateInfo = (mail) => {
+  const updateInfo = (data) => {
+    console.log("in update", data);
+
     updateProfile(auth.currentUser, {
       // eslint-disable-next-line no-restricted-globals
-      displayName: mail,
+      displayName: data,
       photoURL: "https://source.unsplash.com/random/200x200?sig=1",
     })
       .then((r) => {
@@ -105,18 +92,19 @@ const useFirebase = () => {
         // ...
       })
       .catch((error) => {
-        // An error occurred
-        // ...
+        // setError(error.message);
       })
       .finally(setIsLoading(false));
   };
 
   //verify
   const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser).then((result) => {
-      setError("Email Sent! Please verify ");
-      //   gotoLogin();
-    });
+    sendEmailVerification(auth.currentUser)
+      .then((result) => {
+        setError("Email Sent! Please verify ");
+        //   gotoLogin();
+      })
+      .finally(setIsLoading(false));
   };
 
   //sign-Out

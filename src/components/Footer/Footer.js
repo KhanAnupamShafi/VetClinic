@@ -10,7 +10,7 @@ const Footer = () => {
 
       <footer
         id="footer"
-        className="bg-blue-200 relative z-50 dark:bg-gray-900 mt-24"
+        className="bg-blue-200 relative z-50 dark:bg-gray-900"
       >
         <div className=" border-t border-b border-gray-200 dark:border-gray-700 py-16">
           <div className="mx-auto container px-4 xl:px-12 2xl:px-4">
@@ -234,7 +234,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-16 flex flex-col justify-center items-center">
+        <div className="py-5 flex flex-col justify-center items-center">
           <Link to="/">
             <img src={logo} alt="" />
           </Link>

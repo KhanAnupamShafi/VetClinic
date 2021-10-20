@@ -24,8 +24,9 @@ module.exports = {
         primary: "#5c6ac4",
         secondary: "#479bac",
         textRed: "#f04437",
-        textWhite: "#feffff",
+        textWhite: "#e2e8f0",
         gray: "#373737",
+        card: "#faf5ff",
         // ...
       },
     },

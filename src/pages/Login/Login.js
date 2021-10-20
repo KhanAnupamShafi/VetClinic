@@ -14,6 +14,7 @@ const Login = () => {
     signInUser,
     handleGoogleSignIn,
     handleFacebookSignIn,
+    updateInfo,
   } = useAuth();
   console.log(error);
 
@@ -38,9 +39,13 @@ const Login = () => {
   const SignInHandler = () => {
     signInUser(email, password)
       .then((result) => {
+        updateInfo(result.user?.email);
         setUser(result.user);
         history.push(Redirect_uri);
+        window.location.reload(false);
         setError("");
+        setEmail("");
+        setPassword("");
       })
       .catch((error) => {
         setError(error.message);
@@ -48,6 +53,7 @@ const Login = () => {
       .finally(setIsLoading(false));
   };
 
+  // eslint-disable-next-line no-unused-vars
   const FacebookSignInHandler = () => {
     handleFacebookSignIn()
       .then((result) => {
@@ -66,7 +72,7 @@ const Login = () => {
         <div
           className="flex justify-center py-12"
           style={{
-            background: `radial-gradient( circle, #58585a, #000000), url("https://i.ibb.co/QMT523m/Hello-IMG1633957860202.jpg")`,
+            background: `url("https://i.ibb.co/Yj0whKD/custom-header-bg01.jpg")`,
           }}
         >
           <div className="w-full xl:w-3/4 lg:w-11/12 flex">

@@ -5,9 +5,9 @@
       "title": "M1-50 Tablets",
       "subtitle": "Drugs",
       "price": 6,
-      "priceFraction": 99,
+      "stock": 19,
       "photo": "/item/shop-1.jpg",
-      "rating": 5,
+      "rating": 4,
       "reviews": 30
     },
     {
@@ -15,7 +15,7 @@
       "title": "Transport Cart",
       "subtitle": "Accessories",
       "price": 9,
-      "priceFraction": 99,
+      "stock": 99,
       "photo": "/item/shop-2.jpg",
       "rating": 5,
       "reviews": 19
@@ -25,9 +25,9 @@
       "title": "Dog Bowl",
       "subtitle": "Dishes",
       "price": 10,
-      "priceFraction": 99,
+      "stock": 64,
       "photo": "/item/shop-3.jpg",
-      "rating": 5,
+      "rating": 4,
       "reviews": 14
     },
     {
@@ -35,9 +35,9 @@
       "title": "Dog Roullete",
       "subtitle": "Ammunition",
       "price": 8,
-      "priceFraction": 99,
+      "stock": 91,
       "photo": "/item/shop-4.jpg",
-      "rating": 5,
+      "rating": 3,
       "reviews": 11
     },
     {
@@ -45,17 +45,17 @@
       "title": "Dog Toy",
       "subtitle": "Toy",
       "price": 19,
-      "priceFraction": 99,
+      "stock": 84,
       "photo": "/item/shop-5.jpg",
-      "rating": 5,
-      "reviews": 5
+      "rating": 4,
+      "reviews": 51
     },
     {
       "id": 6,
       "title": "Fish Treats",
       "subtitle": "Food",
       "price": 3,
-      "priceFraction": 99,
+      "stock": 55,
       "photo": "/item/shop-6.jpg",
       "rating": 5,
       "reviews": 10

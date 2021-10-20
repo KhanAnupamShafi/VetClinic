@@ -21,19 +21,19 @@ const Services = () => {
           key={service?.id}
           tabIndex="0"
           aria-label="card"
-          className="w-full md:w-1/2 p-6 flex flex-col sm:flex-row flex-grow flex-shrink focus:outline-none items-center"
+          className="w-full bg-card md:w-1/2 p-6 flex flex-col sm:flex-row flex-grow flex-shrink focus:outline-none items-center"
         >
           <div className="lg:w-2/5 w-full">
             <img
               tabIndex="0"
-              className="focus:outline-none w-full"
+              className="focus:outline-none w-full transform transition duration-500 hover:scale-y-125"
               src={service?.image}
               alt="pineapple"
               srcSet=""
             />
           </div>
-          <div className="lg:w-3/5 w-full lg:pl-0 pl-4 rounded-t rounded-b-none overflow-hidden shadow">
-            <div className="lg:pl-8 py-2 text-color">
+          <div className="lg:w-3/5 w-full lg:pl-0 py-2 rounded-xl rounded-b-none overflow-hidden bg-textWhite shadow">
+            <div className="lg:px-4 py-2 text-color">
               <h1
                 tabIndex="0"
                 className="focus:outline-none text-xl xl:text-4xl leading-snug f-f-l font-black"

@@ -2,7 +2,7 @@ import React from "react";
 
 const Appointment = () => {
   return (
-    <div className="mt-10 pt-20 bg-blue-100">
+    <div className="pt-20 bg-blue-100">
       <div className="py-4 lg:py-8">
         <img
           src="https://cdn.tuk.dev/assets/templates/radian/Back_Image.png"
@@ -67,25 +67,27 @@ const Appointment = () => {
                 </h1>
                 <div className="w-full 2xl:w-8/12 mt-3 mx-auto" role="form">
                   <h2 className="text-gray-800 text-base md:text-lg leading-8 tracking-wider">
-                    For enquiries, please email us using the form below
+                    Please fill up the form to make an appointment
                   </h2>
                   <div className="mt-4 md:mt-8">
-                    <p className="text-gray-800 text-base font-medium">Name</p>
                     <input
                       className="mt-3 text-base border-2 w-11/12 lg:w-full xl:w-10/12 hover:border-indigo-600 focus:border-indigo-600 focus:outline-none border-black py-5 pl-4 text-gray-800"
                       type="text"
                       placeholder="Your Name"
                       aria-label="enter your name input"
                     />
+                    <input
+                      className="mt-3 text-base border-2 w-11/12 lg:w-full xl:w-10/12 hover:border-indigo-600 focus:border-indigo-600 focus:outline-none border-black py-5 pl-4 text-gray-800"
+                      type="text"
+                      placeholder="Your Address"
+                      aria-label="enter your name input"
+                    />
                   </div>
                   <div className="mt-4 md:mt-8">
-                    <p className="text-gray-800 text-base font-medium">
-                      Email Address
-                    </p>
                     <input
                       className="mt-3 text-base border-2 w-11/12 lg:w-full xl:w-10/12 hover:border-indigo-600 focus:border-indigo-600 focus:outline-none border-black py-5 pl-4 text-gray-800"
                       type="email"
-                      placeholder="example@mail.com"
+                      placeholder="Email"
                       aria-label="enter your email input"
                     />
                   </div>
@@ -102,7 +104,7 @@ const Appointment = () => {
                   </div>
                   <div className="py-5">
                     <button className="py-3 border md:py-5 px-5 md:px-10 bg-secondary text-black hover:opacity-90 ease-in duration-150 text-sm md:text-lg tracking-wider font-semibold focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                      Send
+                      Submit
                     </button>
                   </div>
                 </div>
