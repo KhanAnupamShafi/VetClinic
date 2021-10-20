@@ -24,11 +24,11 @@ This project is deployed at [https://vethouse-clinic.web.app/](https://vethouse-
 
 ### Learn About This Project
 
-    - An Veterinary Health Care site which provides various health care services for pets
-    - Api data self-generated and hosted from Local/Public folder , all images are hosted at [imagebb.com](https://ibb.co/album/ym8YfF).
-    - React Custom hooks used for Firebase Authentication
-    - React Routing enabled with private route using context api
-    - Responsive Enabled for mobile devices
+- An Veterinary Health Care site which provides various health care services for pets
+- Api data self-generated and hosted from Local/Public folder , all images are hosted at [imagebb.com](https://ibb.co/album/ym8YfF).
+- React Custom hooks used for Firebase Authentication
+- React Routing enabled with private route using context api
+- Responsive Enabled for mobile devices
 
 ## 👩‍💻 Languages Used:
 
